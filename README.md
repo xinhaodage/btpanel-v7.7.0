@@ -23,3 +23,33 @@ LANG=en_US.UTF-8
 ```
 
 修改后保存文件，重启VPS即可。
+
+
+1、屏蔽强制绑定手机
+```Bash
+sed -i "s|bind_user == 'True'|bind_user == 'XXXX'|" /www/server/panel/BTPanel/static/js/index.js
+```
+2、直接删除宝塔强制绑定手机js文件
+```Bash
+rm -f /www/server/panel/data/bind.pl
+```
+##宝塔面板登录地址及账号密码查看命令##
+```Bash
+bt default
+```
+##bbrplus加速##
+```Bash
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+```
+##查看开启状态##
+```Bash
+sysctl -p
+```
+##重启你的VPS##
+```Bash
+reboot
+```
+##登录宝塔面板安装套件##
+
+##登录宝塔面板安装套件##
+安装：Nginx1.18｜MySQL5.6｜php7.4
